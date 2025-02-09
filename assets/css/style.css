@@ -225,7 +225,7 @@ nav .btn {
     font-weight: 200;
 }
 
-.btn-blue {
+.btn-red {
     color: var(--primary-color-text);
     background-color: var(--accent-red);
     width: 305px;
@@ -236,7 +236,7 @@ nav .btn {
     margin-top: 32px;
 }
 
-.btn-blue:hover {
+.btn-red:hover {
     filter: drop-shadow(0px 3px 20px var(--accent-red));
 }
 
@@ -338,5 +338,130 @@ nav .btn {
 /* end testimony preview */
 
 /* services */
-/* parei aqui no começo dessa estilização */
+.services {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.services h2 {
+    font-size: 64px;
+    margin-bottom: 14px;
+    font-weight: 700;
+}
+
+.services p {
+    font-size: 24px;
+    margin-bottom: 80px;
+    width: 1056px;
+}
+
+.service-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    z-index: 2;
+}
+
+.service-box {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+}
+
+.services .gradient-lightblue {
+    top: 20px;
+    left: 600px;
+}
+
+.services .gradient-blue {
+    top: 700px;
+    left: 10px;
+    z-index: 1;
+}
 /* end services */
+
+/* about section */
+.about {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+.about h2 {
+    font-size: 64px;
+    font-weight: normal;
+    margin-bottom: 48px;
+}
+
+.about-datas {
+    display: flex;
+    gap: 90px;
+}
+
+.about-data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.about-data h4 {
+    font-size: 64px;
+    font-weight: 500;
+}
+
+.about-data p {
+    font-size: 32px;
+}
+
+.about-datas hr {
+    height: 150px;
+}
+
+.about-container {
+    display: flex;
+    gap: 32px;
+    margin-top: 100px;
+    z-index: 1;
+}
+
+.about-headlines {
+    width: 577px;
+}
+
+.about-headlines h2 {
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.about-headlines p {
+    font-size: 24px;
+    opacity: 0.8;
+    margin-bottom: 12px;
+}
+
+.about-img {
+    display: flex;
+    gap: 22px;
+}
+
+.about-img div {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.about .gradient-lightblue {
+    left: 700px;
+    top: 200px;
+}
+/* end about section */

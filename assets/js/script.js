@@ -18,7 +18,7 @@ closeBtn.addEventListener("click", () => {
 });
 
 // work preview
-const windowObject = window; 
+const windowObject = window; // pensar numa maneira de fazer funcionar em qualquer seção do site
 windowObject.addEventListener("scroll", function () {
   const scrollY = windowObject.scrollY;
   const horizontalScrollElement = this.document.getElementById("workPreview");
