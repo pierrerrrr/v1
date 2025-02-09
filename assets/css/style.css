@@ -29,7 +29,7 @@
     
     /* Cores de texto */
     --primary-color-text: var(--white);
-    --secondary-color-text: var(--gray);
+    --secondary-color-text: var(--black);
 }
 
 body {
@@ -169,8 +169,11 @@ nav .btn {
 /* hero section */
 .hero-page {
     display: flex;
-    flex-direction: column;
-    background-image: url('../images/hero-page-img.png');
+    flex-direction: row;
+    background-image: url('../images/hero-page-img-v2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     z-index: -10;
     padding: 100px 10px;
 }
@@ -183,6 +186,7 @@ nav .btn {
 }
 
 .hero-page .gradient-v {
+    display: none;
     left: 290px;
     top: 100px;
 }
@@ -198,26 +202,6 @@ nav .btn {
 
 .hero-page-headline h1 {
     font-size: 96px;
-}
-
-.tagline {
-    display: flex;
-    gap: 24px;
-    align-items: center;
-}
-
-.tagline h2 {
-    font-size: 96px;
-}
-
-.tagline-sub {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url('../images/tagline-img.png');
-    height: 86px;
-    width: 639px;
-    border-radius: 32px;
 }
 
 .hero-page-headline p {
@@ -465,3 +449,583 @@ nav .btn {
     top: 200px;
 }
 /* end about section */
+
+/* footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(var(--accent-blue), var(--accent-blue-light));
+}
+
+#f-hr {
+    width: 1306px;
+    margin: 150px 50px 50px 50px;
+    align-self: center;
+}
+
+.footer-callout {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 100px 50px 100px;
+}
+
+.footer-callout a {
+    font-size: 64px;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--white);
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-callout a:hover {
+    color: var(--accent-red);
+}
+
+.footer-callout div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.footer-callout h5 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.btn-callout {
+    display: flex;
+    gap: 15px;
+    font-size: 24px;
+    border-radius: 0px;
+    width: 256px;
+    height: 69px;
+}
+
+.btn-callout i {
+    font-size: 25px;
+    color: var(--white);
+    rotate: 40deg;
+}
+
+#bf-hr {
+    margin: 0px 0px 50px 0px;
+    width: 1306px;
+    align-self: center;
+}
+
+.bottom-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 100px 50px 100px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin: 0px 50px 0px 200px;
+}
+
+.footer-link, .navigation {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-link h6 {
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 24px;
+}
+
+.navigation {
+    gap: 16px;
+}
+
+.navigation a {
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--white);
+    opacity: 0.8;
+    transition: all 0.3s ease-in-out;
+}
+
+.navigation a:hover {
+    opacity: 1;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 100px 50px 100px;
+}
+
+.social-media {
+    display: flex;
+    gap: 20px;
+}
+
+.social-box {
+    border: 1px solid var(--white);
+    height: 50px;
+    width: 50px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-box:hover {
+    background-color: var(--accent-red);
+    border: 1px solid var(--accent-red);
+}
+
+.social-media i {
+    color: var(--white);
+    font-size: 24px;
+}
+
+.socials p {
+    opacity: 0.8;
+}
+/* end footer */
+
+/* laptop & tables */
+@media (max-width: 1024px) and (min-width: 0px) {
+    nav {
+        padding: 20px 50px;
+    }
+
+    nav .btn {
+        display: block;
+        color: var(--white);
+    }
+
+    nav .menu {
+        position: fixed;
+        background-color: var(--accent-red);
+        flex-direction: column;
+        min-width: 400px;
+        height: 100vh;
+        top: 0;
+        right: 100%;
+        padding: 50px 50px;
+        transform: 0.5s;
+        transition-property: right;
+    }
+
+    nav .menu.active {
+        right: 0;
+    }
+
+    nav .menu .close-btn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 25px;
+        color: var(--white);
+    }
+
+    nav .menu a {
+        display: block;
+        font-size: 20px;
+        margin: 20px;
+        padding: 0 15px;
+        color: rgb(255, 255, 255);
+    }
+
+    .btn-visible {
+        display: none;
+    }
+
+    header.sticky {
+        padding: 15px 20px;
+    }
+
+    .hero-page {
+        align-items: center;
+    }
+
+    .hero-page-headline h1 {
+        font-size: 48px;
+        font-weight: 700;
+        text-align: center;
+        width: 600px;
+    }
+
+    .hero-page-headline p {
+        font-size: 20px;
+        width: 512px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .gradient {
+        width: 650px;
+    }
+
+    .work-preview-box {
+        width: 440px;
+        height: 330px;
+    }
+
+    .work-preview-box img {
+        width: 377px;
+        height: 250px;
+    }
+
+    .services .gradient-lightblue {
+        left: 50px;
+    }
+
+    .services p {
+        font-size: 20px;
+        width: 650px;
+    }
+
+    .service-box {
+        flex-direction: column;
+    }
+
+    #service-img-ss {
+        width: 537px;
+    }
+
+    .service-box img {
+        width: 537px;
+    }
+
+    .about .gradient-lightblue {
+        left: 50px;
+    }
+
+    .about-datas {
+        gap: 32px;
+    }
+
+    .about-data h4 {
+        font-size: 48px;
+    }
+
+    .about-data p {
+        font-size: 24px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .work-boxes {
+        flex-direction: column;
+    }
+
+    #f-hr, #bf-hr {
+        width: 695px;
+    }
+
+    .footer-callout {
+        padding: 0px 50px 50px 50px;
+    }
+
+    .footer-callout a {
+        font-size: 40px;
+    }
+
+    .footer-callout h5 {
+        font-size: 24px;
+        width: 156px;
+    }
+
+    .footer-callout div {
+        gap: 8px;
+    }
+
+    .footer-callout button {
+        width: 200px;
+        height: 69px;
+    }
+
+    .footer-callout i {
+        font-size: 30px;
+    }
+
+    .bottom-footer {
+        flex-direction: column;
+        padding: 0px 50px 0px 50px;
+    }
+
+    .footer-links {
+        margin: 50px 0px 50px 0px;
+    }
+
+    .socials {
+        margin: 0px 40px 50px 40px;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 0px) {
+    nav {
+        padding: 10px 24px;
+    }
+
+    nav .menu {
+        min-width: 300px;
+    }
+
+    nav.sticky {
+        padding: 15px 24px;
+    }
+
+    section {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-page .gradient-blue {
+        width: 400px;
+        height: 400px;
+    }
+
+    .hero-page .gradient-blue {
+        top: 10px;
+        left: -200px;
+    }
+
+    .hero-page {
+        align-items: center;
+        gap: 10px;
+        min-height: 400px;
+    }
+
+    .hero-page-headline {
+        width: 258px;
+    }
+
+    .hero-page-headline h1 {
+        width: 260px;
+        font-size: 24px;
+    }
+
+    .hero-page-headline p {
+        font-size: 14px;
+        width: 258px;
+    }
+
+    .btn-2 {
+        width: 178px;
+        height: 39px;
+        font-size: 16px;
+        margin-top: 14px;
+    }
+
+    .brands img {
+        width: 80px;
+    }
+
+    .work-preview-box {
+        width: 283px;
+        height: 197px;
+    }
+
+    .work-preview-box img {
+        width: 221px;
+        height: 153px;
+    }
+
+    .testimony-preview-box {
+        width: 291px;
+        height: 100%;
+        padding: 25px;
+    }
+
+    .testimony-preview-box p {
+        font-size: 10px;
+    }
+
+    .testimony-people img {
+        width: 29px;
+    }
+
+    .testimony-people h5, .testimony-people h6 {
+        font-size: 16px;
+    }
+
+    .services .gradient-blue {
+        top: 600px;
+        left: -300px;
+    }
+
+    .services {
+        padding-top: 20px;
+    }
+
+    .services h2 {
+        font-size: 32px;
+        margin-bottom: 9px;
+    }
+
+    .service p {
+        font-size: 11px;
+        width: 278px;
+        margin-bottom: 13px;
+    }
+
+    #service-img-ss {
+        width: 253px;
+        height: 120px;
+    }
+
+    .service-boxes {
+        gap: 3px;
+    }
+
+    .service-box {
+        gap: 3px;
+    }
+
+    .service-box img {
+        width: 256px;
+        height: 234px;
+    }
+
+    .about .gradient-lightblue {
+        top: 100px;
+    }
+
+    .about h2 {
+        font-size: 32px;
+    }
+
+    .about-datas {
+        flex-direction: column;
+    }
+
+    .about-datas hr {
+        height: 0px;
+        width: 245px;
+    }
+
+    .about-headlines {
+        width: 280px;
+    }
+
+    .about-headlines h2 {
+        font-size: 24px;
+    }
+
+    .about-headlines p {
+        font-size: 16px;
+    }
+
+    .about .brands {
+        margin-bottom: 30px;
+    }
+
+    .about-img {
+        gap: 10px;
+    }
+
+    .about-img div {
+        gap: 10px;
+    }
+
+    .about-img img {
+        width: 130px;
+        height: 150px;
+    }
+
+    #about-img-short {
+        height: 100px;
+    }
+
+    .work h2 {
+        font-size: 24px;
+    }
+
+    .work hr {
+        width: 265px;
+    }
+
+    .work-boxes {
+        gap: 25px;
+        margin-bottom: 25px;
+    }
+
+    .work-box {
+        width: 265px;
+        height: 280px;
+        padding: 26px;
+        gap: 15px;
+    }
+
+    .work-box img {
+        width: 213px;
+        height: 196px;
+    }
+
+    #f-hr, #bf-hr {
+        width: 100%;
+        margin: 0;
+    }
+
+    #f-hr {
+        margin: 55px 24px 20px 24px;
+    }
+
+    .footer-callout {
+        padding: 0px 27px 27px 27px;
+    }
+
+    .footer-callout div h5 {
+        display: none;
+    }
+
+    .footer-callout a {
+        font-size: 20px;
+    }
+
+    .footer-callout button {
+        width: 132px;
+        height: 50px;
+        font-size: 16px;
+        padding: 5px;
+        margin-top: 0px;
+    }
+
+    .btn-callout i {
+        font-size: 16px;
+    }
+
+    .bottom-footer {
+        padding: 0px 24px 0px 24px;
+        align-items: center;
+    }
+
+    .footer-links {
+        gap: 20px;
+    }
+
+    .footer-link h6 {
+        font-size: 16px;
+    }
+
+    .navigation a {
+        font-size: 14px
+    }
+
+    .socials {
+        flex-direction: column;
+        margin-top: 24px;
+    }
+
+    .socials p {
+        margin-top: 30px;
+    }
+
+    
+}
+/* end laptop & tables */

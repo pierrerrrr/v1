@@ -22,8 +22,25 @@ const windowObject = window; // pensar numa maneira de fazer funcionar em qualqu
 windowObject.addEventListener("scroll", function () {
   const scrollY = windowObject.scrollY;
   const horizontalScrollElement = this.document.getElementById("workPreview");
-  const horizontalScrollElement2 = this.document.getElementById("testimonyPreview");
-  
+  const horizontalScrollElement2 =
+    this.document.getElementById("testimonyPreview");
+
   horizontalScrollElement.scrollLeft = scrollY * 0.2;
   horizontalScrollElement2.scrollLeft = scrollY * 0.2;
 });
+
+// scroll reveal
+const sr = ScrollReveal({
+  origin: "bottom",
+  distance: "60px",
+  duration: 1000,
+  delay: 100,
+  easing: "ease-in-out",
+});
+
+// hero page section
+sr.reveal(".hero-page .gradient-blue");
+sr.reveal(".hero-page-headline h1", { delay: 200, origin: left });
+sr.reveal(".hero-page-headline p", { delay: 500, origin: left });
+sr.reveal(".tagline", { delay: 300, origin: left });
+sr.reveal(".brands", { delay: 500 });
